@@ -1,0 +1,101 @@
+/* Fondo pastel animado estilo nube */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Neue', cursive, sans-serif;
+    background: 
+        radial-gradient(circle at 20% 30%, #c2f0c2 0%, transparent 60%),
+        radial-gradient(circle at 80% 20%, #b5d0f9 0%, transparent 60%),
+        radial-gradient(circle at 50% 80%, #e0c7f9 0%, transparent 60%),
+        radial-gradient(circle at 70% 70%, #d4fc79 0%, transparent 60%),
+        #f0fff0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 200% 200%;
+    animation: cloudMotion 30s ease-in-out infinite alternate;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Animación de fondo */
+@keyframes cloudMotion {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Contenedor principal */
+.page {
+    background-color: #ffffffcc;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+/* Título */
+h1 {
+    font-size: 2.2rem;
+    color: #7f8ff4;
+    margin-bottom: 20px;
+}
+
+/* Entrada de texto */
+input[type="text"] {
+    padding: 12px;
+    width: 70%;
+    border: 2px solid #b5d0f9;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #444;
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+
+input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+input[type="text"]:focus {
+    border-color: #7f8ff4;
+    outline: none;
+}
+
+/* Botón */
+button {
+    padding: 12px 20px;
+    background-color: #7f8ff4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #5f6ad4;
+    transform: scale(1.05);
+}
+
+/* Contenedor de tareas */
+.task-list {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#mytaskDelete{
+    background-color: #c8f7c5;
+    border: 2px solid #81c784 ; 
+    border-radius: 10px;
+}
+
